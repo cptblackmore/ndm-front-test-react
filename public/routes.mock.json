@@ -1,0 +1,65 @@
+[
+  {
+    "uuid": "93f57fcb-45df-4701-9c36-1a8d4c773a5a",
+    "address": "0.0.0.0",
+    "mask": "0.0.0.0",
+    "gateway": "193.0.174.1",
+    "interface": "Подключение Ethernet"
+  },
+  {
+    "uuid": "3c6a2e19-9584-4f4f-a72c-879a8cbb3ef7",
+    "address": "10.1.30.0",
+    "mask": "255.255.255.0",
+    "gateway": "0.0.0.0",
+    "interface": "Гостевая сеть"
+  },
+  {
+    "uuid": "a419fbfd-5e91-4906-91c5-53f86c3d6d52",
+    "address": "192.168.0.1",
+    "mask": "255.255.255.0",
+    "gateway": "0.0.0.0",
+    "interface": "Домашняя сеть"
+  },
+  {
+    "uuid": "d2cc47b4-4a87-4fd2-b6f2-0f6cb4fcb4e4",
+    "address": "193.0.174.0",
+    "mask": "255.255.255.0",
+    "gateway": "0.0.0.0",
+    "interface": "Подключение Ethernet"
+  },
+  {
+    "uuid": "4ff64e67-1f7a-4ec0-a63e-49aa7d7f6e9d",
+    "address": "193.0.175.0",
+    "mask": "255.255.255.32",
+    "gateway": "193.0.174.10",
+    "interface": "Подключение Ethernet"
+  },
+  {
+    "uuid": "cd95e46c-0503-4aa6-8c68-f34595bfc94d",
+    "address": "193.0.175.22",
+    "mask": "255.255.255.255",
+    "gateway": "193.0.174.1",
+    "interface": "Подключение Ethernet"
+  },
+  {
+    "uuid": "09f926fa-50ae-4e17-8328-0b4c7c84d233",
+    "address": "10.1.31.0",
+    "mask": "255.255.255.0",
+    "gateway": "0.0.0.0",
+    "interface": "Гостевая сеть"
+  },
+  {
+    "uuid": "cdb9b5bc-598b-4c2f-8f36-eaf4658d3610",
+    "address": "192.168.1.0",
+    "mask": "255.255.255.0",
+    "gateway": "0.0.0.0",
+    "interface": "Домашняя сеть"
+  },
+  {
+    "uuid": "3a9a21e8-8c57-4df5-a42b-ec31b56dbf69",
+    "address": "193.0.176.0",
+    "mask": "255.255.255.0",
+    "gateway": "193.0.174.1",
+    "interface": "Подключение Ethernet"
+  }
+]
