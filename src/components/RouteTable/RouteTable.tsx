@@ -17,7 +17,12 @@ export const RouteTable: React.FC<RouteTableProps> = ({ routes }) => {
   `;
 
   return (
-    <table css={tableStyles} cellSpacing={0}>
+    <table 
+      css={tableStyles} 
+      cellSpacing={0}
+      role="table" 
+      aria-label="Таблица маршрутов IPv4"
+    >
       <thead>
         <tr>
           <RouteTableHeader label="Адрес назначения" columnKey={"address"} sort={sort} onSort={toggleSort} />

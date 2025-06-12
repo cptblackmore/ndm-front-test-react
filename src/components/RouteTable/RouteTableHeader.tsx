@@ -42,6 +42,15 @@ export const RouteTableHeader: React.FC<RouteTableHeaderProps> = ({ label, colum
       onClick={() => onSort(columnKey)}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      scope="col"
+      aria-sort={isSorted ? (sort.direction === "asc" ? "ascending" : "descending") : "none"}
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onSort(columnKey);
+        }
+      }}
     >
       <div css={thContentStyles}>
         {label}

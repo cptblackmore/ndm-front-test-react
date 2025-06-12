@@ -6,6 +6,10 @@ export const GlobalStyles: React.FC = () => {
       styles={(theme) => css`
         * {
           box-sizing: border-box;
+
+          &:focus {
+            outline: 2px solid ${theme.colors.grey[300]};
+          }
         }
         body {
           margin: 0;

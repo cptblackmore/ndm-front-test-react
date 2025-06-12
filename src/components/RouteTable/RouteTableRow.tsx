@@ -20,7 +20,7 @@ const trStyles = (theme: Theme) => css`
 
 export const RouteTableRow: React.FC<Props> = ({ route }) => {
   return (
-    <tr css={trStyles}>
+    <tr css={trStyles} role="row">
       <td>{route.address}/{maskToCIDR(route.mask)}</td>
       <td>{route.gateway}</td>
       <td>{route.interface}</td>
