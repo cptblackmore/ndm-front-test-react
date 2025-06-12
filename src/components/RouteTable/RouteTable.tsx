@@ -1,7 +1,8 @@
+import { css } from "@emotion/react";
 import { useSortableTable } from "../../hooks/useSortableTable/useSortableTable";
 import type Ipv4Route from "../../types/Ipv4Route";
-import { maskToCIDR } from "../../utils/maskToCIDR";
 import { RouteTableHeader } from "./RouteTableHeader";
+import { RouteTableRow } from "./RouteTableRow";
 
 interface RouteTableProps {
   routes: Ipv4Route[];
@@ -10,8 +11,13 @@ interface RouteTableProps {
 export const RouteTable: React.FC<RouteTableProps> = ({ routes }) => {
   const { sort, toggleSort, sorted } = useSortableTable(routes);
 
+  const tableStyles = css`
+    width: 100%;
+    table-layout: fixed;
+  `;
+
   return (
-    <table>
+    <table css={tableStyles} cellSpacing={0}>
       <thead>
         <tr>
           <RouteTableHeader label="Адрес назначения" columnKey={"address"} sort={sort} onSort={toggleSort} />
@@ -22,11 +28,7 @@ export const RouteTable: React.FC<RouteTableProps> = ({ routes }) => {
       <tbody>
         {
           sorted.map(route => (
-            <tr key={route.uuid}>
-              <td>{route.address}/{maskToCIDR(route.mask)}</td>
-              <td>{route.gateway}</td>
-              <td>{route.interface}</td>
-            </tr>
+            <RouteTableRow key={route.uuid} route={route} />
           ))
         }
       </tbody>
