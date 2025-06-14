@@ -26,12 +26,8 @@ export const useSortableTable = (routes: Ipv4Route[]) => {
   };
 
   const sorted = useMemo(() => {
-    const sortedRoutes = [...routes]
-
-    sortedRoutes.sort(getSortFn(sort));
-
-    return sortedRoutes
-  }, [routes, sort])
+    return [...routes].sort(getSortFn(sort));
+  }, [routes, sort]);
 
   return {
     sort,
